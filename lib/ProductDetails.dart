@@ -12,8 +12,18 @@ class Productdetails extends StatelessWidget {
           title: Text(product.productName),
         ),
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Container(
+              width: 200,
+              margin: EdgeInsets.all(10),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(50),
+                child: Image(
+                  image: NetworkImage('https://picsum.photos/200/300?random=1'),
+                ),
+              ),
+            ),
             Text('Product ID: ' + product.productId,
                 style: TextStyle(fontSize: 18)),
             SizedBox(height: 10),
